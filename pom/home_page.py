@@ -7,7 +7,7 @@ class HomePage(BasePages):
 #
    def __init__(self,driver):
         super(HomePage, self).__init__(driver)
-print("hhhhh")
+print("hhh")
 #
 #
 #     def load_page(self):
