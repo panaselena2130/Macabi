@@ -46,7 +46,7 @@ class Driver:
 
     def get_element_title(self):
 
-        expected_title = input('Enter_expected_name_page_title').upper()
+        expected_title = input('Enter_expected_name_page_title')
         actual_title = self.driver.title
         try:
             assert expected_title in actual_title

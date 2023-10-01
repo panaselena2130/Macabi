@@ -15,9 +15,10 @@ dr = webdriver.Chrome()
 
 driver = Driver(dr)
 
-
 driver.load_page()
-print("********")
+
+driver.verific_page()
+
 
 time.sleep(5)
 
