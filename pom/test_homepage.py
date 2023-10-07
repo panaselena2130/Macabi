@@ -19,6 +19,8 @@ driver.load_page()
 
 driver.verific_page()
 
+driver.are_visible()
+
 
 time.sleep(5)
 

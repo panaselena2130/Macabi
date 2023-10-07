@@ -33,7 +33,8 @@ class Driver:
                     'css': By.CSS_SELECTOR,
                     'class': By.CLASS_NAME}
 
-        return locating[find_by.lower()]
+        # return locating[find_by.lower()]
+        return locating.get(find_by)
 
 
     def are_visible(self, find_by: str, locator: str, locator_name=None) -> List[WebElement]:

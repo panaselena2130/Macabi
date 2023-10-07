@@ -1,5 +1,6 @@
 locator_passport_id ="identifyWithOtpCitizenId"
-locator_birthday_date_id - "birthDate"
+locator_birthday_date_id = "birthDate"
+
 
 from pom.Base_page import BasePages
 #
