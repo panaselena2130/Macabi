@@ -15,16 +15,18 @@ from pom.home_page import HomePage
 # driver_path = 'C:\\Users\Lena\pythonProject\Macabi\Source\chromedriver.exe'
 dr = webdriver.Chrome()
 
-driver = Driver_Base(dr)
+# driver = Driver_Base(dr)
 
+driver = HomePage(dr)
 driver.load_page()
 
 # driver.verific_page()
 
-driver.are_visible('xpath1',locator_passport_id)
+driver.are_visible('id',driver.locator_passport_id)
 
 
 time.sleep(5)
+
 
 
 

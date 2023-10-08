@@ -31,7 +31,8 @@ class Driver_Base:
 
         locating = {'xpath1': By.XPATH,
                     'css': By.CSS_SELECTOR,
-                    'class': By.CLASS_NAME}
+                    'class': By.CLASS_NAME,
+                    'id':By.ID}
 
         return locating[find_by.lower()]
         # return locating.get(find_by)

@@ -1,21 +1,17 @@
-locator_passport_id ="identifyWithOtpCitizenId"
+# locator_passport_id ="identifyWithOtpCitizenId"
 locator_birthday_date_id = "birthDate"
 
 
-from pom.Base_page import BasePages
+from pom.Base_page import Driver_Base
 #
-class HomePage(BasePages):
+class HomePage(Driver_Base):
 
 
-    def __init__(self,driver):
-        super(HomePage, self).__init__(driver)
+    def __init__(self,driver1):
+        super(HomePage, self).__init__(driver1)
+        self.d=driver1
 
-
-
-
-
-
-
+        self.locator_passport_id = "identifyWithOtpCitizenId"
 
 
 
