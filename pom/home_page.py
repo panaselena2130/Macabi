@@ -9,7 +9,7 @@ class HomePage(Driver_Base):
 
     def __init__(self,driver1):
         super(HomePage, self).__init__(driver1)
-        self.d=driver1
+
 
         self.locator_passport_id = "identifyWithOtpCitizenId"
 
