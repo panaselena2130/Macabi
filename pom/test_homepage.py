@@ -25,7 +25,8 @@ driver.load_page()
 driver.are_visible('id',driver.locator_passport_id)
 print("ok")
 
-
+driver.are_visible('id', driver.locator_birthday_date_id)
+print("ok")
 
 time.sleep(5)
 
