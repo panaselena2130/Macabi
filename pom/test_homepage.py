@@ -22,11 +22,19 @@ driver.load_page()
 
 # driver.verific_page()
 
-driver.are_visible('id',driver.locator_passport_id)
+driver.are_visible('id',driver.locator_passport_id).send
 print("ok")
+
+driver.send_keys(driver.passport)
+
+
 
 driver.are_visible('id', driver.locator_birthday_date_id)
 print("ok")
+
+driver.send(driver.birthday)
+
+driver.send_keys("")
 
 time.sleep(5)
 
