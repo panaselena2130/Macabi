@@ -16,7 +16,7 @@ class HomePage(Driver_Base):
         self.locator_birthday_date_id = "birthDate"
         self.passport = "332708494"
         self.birthday = "20/04/1975"
-        self.locator_keep_on = "submit details"
+        self.locator_keep_on = "המשך"
 
 
 
