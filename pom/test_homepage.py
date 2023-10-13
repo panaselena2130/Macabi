@@ -32,7 +32,14 @@ print("ok")
 driver.is_visible('id', driver.locator_birthday_date_id).send_keys(driver.birthday)
 print("ok")
 
-# driver.send_keys(driver.birthday)
+time.sleep(5)
+
+driver.is_visible('class', driver.locator_keep_on)
+time.sleep(5)
+
+driver.click()
+
+driver.send_keys(driver.birthday)
 
 
 

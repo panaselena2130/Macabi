@@ -14,8 +14,9 @@ class HomePage(Driver_Base):
 
         self.locator_passport_id = "identifyWithOtpCitizenId"
         self.locator_birthday_date_id = "birthDate"
-        self.passport = "33270****"
-        self.birthday = "20/04/19**"
+        self.passport = "332708494"
+        self.birthday = "20/04/1975"
+        self.locator_keep_on = "submit details"
 
 
 
