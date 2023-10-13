@@ -37,6 +37,9 @@ class Driver_Base:
         return locating[find_by.lower()]
         # return locating.get(find_by)
 
+    def is_visible(self, find_by:str, locator: str, locator_name=None) -> WebElement:
+        return self.wait.until(ec.visibility_of_element_located((find_by, locator)))
+
 
 
     def are_visible(self, find_by: str, locator: str, locator_name=None) -> List[WebElement]:
