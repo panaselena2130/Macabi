@@ -74,7 +74,9 @@ class Driver_Base:
         return [element for element in elements if element.text.lower() == name][0]
 
 
-    def screenshot_now(self,name_of_screen):
+    def screenshot_now(self,name):
         timestr = time.strftime('%Y-%m-%d-%H.%M.%S')
         time.sleep(2)
-        self.driver.save_screenshot(f".{name_of_screen,timestr}.png")
+        self.driver.save_screenshot(f"C:\\Users\\Lena\\pythonProject\\Macabi\\Source\\{name,timestr}.png")
+
+

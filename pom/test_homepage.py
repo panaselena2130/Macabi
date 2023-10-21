@@ -2,7 +2,7 @@ import time
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-
+from datetime import datetime
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
@@ -12,36 +12,40 @@ from pom.Base_page  import Driver_Base
 from pom.home_page import HomePage
 
 
-# driver_path = 'C:\\Users\Lena\pythonProject\Macabi\Source\chromedriver.exe'
+
 dr = webdriver.Chrome()
 
-# driver = Driver_Base(dr)
 #create object of class HomePage and putting variable -  driver as attribute to HomePage(BasePage)
 driver = HomePage(dr)
 
-#load homepage of necessery wibsite
+#open homepage of necessery wibsite
 driver.load_page()
 
+#  *********************************************************
 # checking verification of page
 
 # driver.verific_page()
+#  *********************************************************
 
-
-
+#checking of element of sending number passport is visible
 driver.is_visible('id',driver.locator_passport_id).send_keys(driver.passport)
+driver.screenshot_now("passport was sent")
 
-driver.screenshot_now('thdhd')
-
-
-
-
-
-driver.is_visible('id', driver.locator_birthday_date_id)
+#checking of element of input field of date birth is visible and click
+# driver.is_visible('id', driver.locator_birthday_date_id)
 driver.do_click('id', driver.locator_birthday_date_id)
+driver.screenshot_now("input field of birth click")
 
-driver.screenshot_now('bbbbb')
+driver.do_click('class', 'ui-datepicker-year')
 
-# print("ok")
+# driver.screenshot_now()
+
+
+
+
+
+
+
 #
 # time.sleep(5)
 #
