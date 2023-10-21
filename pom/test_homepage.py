@@ -28,17 +28,32 @@ driver.load_page()
 #  *********************************************************
 
 #checking of element of sending number passport is visible
-driver.is_visible('id',driver.locator_passport_id).send_keys(driver.passport)
+driver.is_visible('id',driver.locator_passport_id).send_keys(driver.passport_keys)
 driver.screenshot_now("passport was sent")
 
 #checking of element of input field of date birth is visible and click
-# driver.is_visible('id', driver.locator_birthday_date_id)
 driver.do_click('id', driver.locator_birthday_date_id)
 driver.screenshot_now("input field of birth click")
 
-driver.do_click('class', 'ui-datepicker-year')
+# click of year input field
+driver.do_click('class', driver.year_input_field_class)
 
-# driver.screenshot_now()
+#checking of element dropdown triangle of year
+driver.is_visible('xpath', driver.year_xpath_1975).click()
+
+# click of month input field
+driver.do_click('class',driver.month_input_field_class)
+
+
+#checking of element dropdown triangle of month
+driver.is_visible('xpath', driver.month_xpath_april).click()
+
+
+
+#checking of element dropdown triangle of day
+driver.is_visible('xpath', driver.day_xpath_20).click()
+
+
 
 
 
