@@ -1,3 +1,5 @@
+import time
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
@@ -38,6 +40,7 @@ class Driver_Base:
         # return locating.get(find_by)
 
     def is_visible(self, find_by:str, locator: str, locator_name=None) -> WebElement:
+
         return self.wait.until(ec.visibility_of_element_located((find_by, locator)))
 
 
@@ -46,9 +49,9 @@ class Driver_Base:
         return self.wait.until(ec.visibility_of_all_elements_located((self.webelement_by(find_by), locator)),
                                locator_name)
 
-    def do_click(self, find_by: str, locator: str, locator_name) -> List[WebElement]:
+    def do_click(self, find_by: str, locator: str, ) -> List[WebElement]:
         return self.wait.until(ec.element_to_be_clickable((self.webelement_by(find_by), locator)),
-                               locator_name).click()
+                               ).click()
 
     def get_element_title(self):
 
@@ -69,3 +72,9 @@ class Driver_Base:
     def get_element_by_text(self, elements: List[WebElement], name: str) -> WebElement:
         name = name.lower()
         return [element for element in elements if element.text.lower() == name][0]
+
+
+    def screenshot_now(self,name_of_screen):
+        timestr = time.strftime('%Y-%m-%d-%H.%M.%S')
+        time.sleep(2)
+        self.driver.save_screenshot(f".{name_of_screen,timestr}.png")

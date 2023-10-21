@@ -16,30 +16,41 @@ from pom.home_page import HomePage
 dr = webdriver.Chrome()
 
 # driver = Driver_Base(dr)
-
+#create object of class HomePage and putting variable -  driver as attribute to HomePage(BasePage)
 driver = HomePage(dr)
+
+#load homepage of necessery wibsite
 driver.load_page()
+
+# checking verification of page
 
 # driver.verific_page()
 
+
+
 driver.is_visible('id',driver.locator_passport_id).send_keys(driver.passport)
-print("ok")
 
-# driver.send_keys(driver.passport)
-
+driver.screenshot_now('thdhd')
 
 
-driver.is_visible('id', driver.locator_birthday_date_id).send_keys(driver.birthday)
-print("ok")
 
-time.sleep(5)
 
-driver.is_visible('class', driver.locator_keep_on)
-time.sleep(5)
 
-driver.click()
+driver.is_visible('id', driver.locator_birthday_date_id)
+driver.do_click('id', driver.locator_birthday_date_id)
 
-driver.send_keys(driver.birthday)
+driver.screenshot_now('bbbbb')
+
+# print("ok")
+#
+# time.sleep(5)
+#
+# driver.is_visible('class', driver.locator_keep_on)
+# time.sleep(5)
+#
+# driver.click()
+#
+# driver.send_keys(driver.birthday)
 
 
 
